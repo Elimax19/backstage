@@ -13,6 +13,8 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
+      - name: snyk auth
+        run: snyk auth 
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
         id: snyk
